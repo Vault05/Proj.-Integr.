@@ -1,0 +1,1 @@
+O projeto integrador do Módulo I do curso de Programador Web do Senac, realizado pelos alunos Brayan Richter, Bruno Alves, Marco Antonio, Murilo Leal e Pedro Henrique tem como objetivo recriar/refazer uma Wiki do jogo Dredge
