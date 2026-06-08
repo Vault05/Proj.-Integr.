@@ -1,0 +1,19 @@
+body {
+    background-color: #00020b;
+    color: white;
+}
+
+a {
+    color: #38b6ff;
+}
+
+.imagensgerais {
+    display: flex;
+    gap: 45px;
+}
+
+.imagensgerais2 {
+    display: flex;
+    gap: 45px;
+}
+
