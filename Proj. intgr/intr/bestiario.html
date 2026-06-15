@@ -9,6 +9,15 @@
 <body>
 
     <header>
+         <h1>DREDGE</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="personagens.html">Personagens</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="bestiario.html">Bestiário</a>
+      <a href="mapa.html">Mapa</a>
+    </nav>
+    <br><br>
         <h1>Enciclopédia de Ameaças</h1>
         <p class="subtitle">O registro definitivo de todos os terrores que habitam as águas e a mente</p>
     </header>
@@ -23,7 +32,7 @@
         
         <div class="fish-card regional">
             <div class="fish-image-container">
-                <img src="https://via.placeholder.com/280x150/05080c/c49a45?text=O+Anfipode+Gigante" m ="Anfípode Gigante">
+                <img src="imag\Serpent2.webp" m ="Anfípode Gigante">
             </div>
             <h2>O Anfípode Gigante</h2>
             <span class="habitat">Falésias do Vendaval (Gale Cliffs)</span>
@@ -32,7 +41,7 @@
 
         <div class="fish-card regional">
             <div class="fish-image-container">
-                <img src="https://via.placeholder.com/280x150/05080c/c49a45?text=Criatura+Abissal" alt="Criatura Abissal">
+                <img src="imag\StellarBasinCreature.webp" alt="Criatura Abissal">
             </div>
             <h2>A Criatura Abissal</h2>
             <span class="habitat">Bacia Estelar (Stellar Basin)</span>
@@ -41,7 +50,7 @@
 
         <div class="fish-card regional">
             <div class="fish-image-container">
-                <img src="https://via.placeholder.com/280x150/05080c/c49a45?text=Sugadores+de+Mente" alt="Sugadores de Mente">
+                <img src="imag\MindSucker.webp" alt="Sugadores de Mente">
             </div>
             <h2>Sugadores de Mente</h2>
             <span class="habitat">Vertente Retorcida (Twisted Strand)</span>
@@ -50,7 +59,7 @@
 
         <div class="fish-card regional">
             <div class="fish-image-container">
-                <img src="https://via.placeholder.com/280x150/05080c/c49a45?text=Cardume+Cego" alt="Cardume Cego">
+                <img src="imag\Piranhas.webp" alt="Cardume Cego">
             </div>
             <h2>Cardume Cego</h2>
             <span class="habitat">Espinha do Diabo (Devil's Spine)</span>
@@ -68,7 +77,7 @@
 
         <div class="fish-card regional">
             <div class="fish-image-container">
-                <img src="https://via.placeholder.com/280x150/05080c/c49a45?text=O+Narval+Gigante" alt="O Narval Gigante">
+                <img src="imag\Monstrous_narwhal_photo.webp" alt="O Narval Gigante">
             </div>
             <h2>O Narval Gigante</h2>
             <span class="habitat">A Extensão Pálida (The Pale Reach)</span>
@@ -77,7 +86,7 @@
 
         <div class="fish-card regional">
             <div class="fish-image-container">
-                <img src="https://via.placeholder.com/280x150/05080c/c49a45?text=O+Sifonoforo+Mutante" alt="Sifonóforo Negro">
+                <img src="imag\Ocularooze.webp" alt="Sifonóforo Negro">
             </div>
             <h2>Sifonóforo de Gosma</h2>
             <span class="habitat">A Plataforma de Ferro (The Iron Rig)</span>
@@ -95,7 +104,7 @@
 
         <div class="fish-card panic">
             <div class="fish-image-container">
-                <img src="https://via.placeholder.com/280x150/05080c/9d4edd?text=Falso+Barco" alt="Falso Barco">
+                <img src="imag\GhostShip.webp" alt="Falso Barco">
             </div>
             <h2>Falso Barco Pescador</h2>
             <span class="habitat">Mar Aberto | Noite Alta</span>
@@ -104,7 +113,7 @@
 
         <div class="fish-card panic">
             <div class="fish-image-container">
-                <img src="https://via.placeholder.com/280x150/05080c/9d4edd?text=Corvos+da+Nevoa" alt="Corvos da Névoa">
+                <img src="imag\Birds.webp" alt="Corvos da Névoa">
             </div>
             <h2>Corvos da Névoa</h2>
             <span class="habitat">Qualquer Região | Pânico Médio</span>
@@ -122,7 +131,7 @@
 
         <div class="fish-card panic">
             <div class="fish-image-container">
-                <img src="https://via.placeholder.com/280x150/05080c/9d4edd?text=Tornado+de+Nevoa" alt="Tornado de Névoa">
+                <img src="imag\JellyBomb.webp" alt="Tornado de Névoa">
             </div>
             <h2>Águas-Vivas e Trombas</h2>
             <span class="habitat">Qualquer Região | Noite</span>
@@ -130,26 +139,11 @@
         </div>
 
     </main>
+     <footer>
+    <p>Site inspirado em DREDGE - Projeto Integrador</p>
+  </footer>
 
-    <script>
-        function filterFish(type) {
-            const cards = document.querySelectorAll('.fish-card');
-            const buttons = document.querySelectorAll('.filters button');
-
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            cards.forEach(card => {
-                if (type === 'all') {
-                    card.style.display = 'block';
-                } else if (card.classList.contains(type)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
-
+    
+<script src="script.js"></script>
 </body>
 </html>
