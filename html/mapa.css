@@ -1,0 +1,374 @@
+/* ── TOKENS ─────────────────────────────────── */
+:root {
+  --void:       #07090F;
+  --deep:       #0C1724;
+  --card-bg:    #101E30;
+  --gold:       #C4A250;
+  --gold-dim:   rgba(196,162,80,0.35);
+  --glow:       #3B7FC4;
+  --glow-dim:   rgba(59,127,196,0.25);
+  --text:       #BFD0E0;
+  --muted:      #607080;
+  --border:     rgba(59,127,196,0.18);
+}
+
+/* ── RESET ──────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ── HEADER ─────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.4rem 4rem;
+  background: rgba(7,9,15,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold-dim) 30%, var(--gold-dim) 70%, transparent 100%);
+  pointer-events: none;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: 0.42em;
+  color: var(--gold);
+  text-decoration: none;
+  text-shadow: 0 0 28px rgba(196,162,80,0.35);
+}
+
+nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+nav a {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.25s, border-color 0.25s, text-shadow 0.25s;
+}
+
+nav a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold-dim);
+  text-shadow: 0 0 14px rgba(196,162,80,0.45);
+}
+
+nav a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ── HERO ────────────────────────────────────── */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% -10%, rgba(59,127,196,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 40% at 50% 110%, rgba(196,162,80,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--glow);
+  margin-bottom: 1.2rem;
+  opacity: 0.8;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #DDE8F0;
+  margin-bottom: 0.9rem;
+}
+
+.hero p {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.hero-rule {
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1.6rem auto 0;
+}
+
+/* ── BREADCRUMB ─────────────────────────────── */
+.breadcrumb {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--glow);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ── GRID ───────────────────────────────────── */
+.regions {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 7rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+}
+
+@media (max-width: 1080px) {
+  .regions { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .regions { grid-template-columns: 1fr; }
+}
+
+/* ── CARD ───────────────────────────────────── */
+.region-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 1px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.38s cubic-bezier(0.22,0.68,0,1.2),
+    box-shadow 0.38s ease,
+    border-color 0.38s ease;
+}
+
+.region-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(59,127,196,0.55);
+  box-shadow:
+    0 16px 48px rgba(4,12,28,0.7),
+    0 0 0 1px rgba(59,127,196,0.22),
+    0 0 24px rgba(59,127,196,0.12);
+}
+
+/* Ornamentos de canto */
+.region-card::before,
+.region-card::after {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.region-card::before {
+  top: 0; left: 0;
+  border-top: 1.5px solid var(--gold);
+  border-left: 1.5px solid var(--gold);
+}
+
+.region-card::after {
+  bottom: 0; right: 0;
+  border-bottom: 1.5px solid var(--gold);
+  border-right: 1.5px solid var(--gold);
+}
+
+.region-card:hover::before,
+.region-card:hover::after {
+  opacity: 1;
+}
+
+.region-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.65) saturate(0.75);
+  transition: filter 0.45s ease, transform 0.45s ease;
+}
+
+.region-card:hover img {
+  filter: brightness(0.5) saturate(1.0);
+  transform: scale(1.06);
+}
+
+/* Vinheta escura */
+.card-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(7,9,15,0.95) 0%,
+    rgba(7,9,15,0.5)  40%,
+    rgba(7,9,15,0.1)  65%,
+    transparent       80%
+  );
+  pointer-events: none;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.6rem 1.3rem 1.3rem;
+  z-index: 2;
+}
+
+.card-label {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+  opacity: 0.75;
+  transform: translateY(4px);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.region-card:hover .card-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: #EAF2FA;
+  line-height: 1.25;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.9);
+  display: block;
+}
+
+/* Seta de explorar */
+.card-arrow {
+  position: absolute;
+  top: 1.1rem; right: 1.1rem;
+  z-index: 3;
+  width: 28px; height: 28px;
+  border: 1px solid var(--gold-dim);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 0.85rem;
+  opacity: 0;
+  transform: scale(0.7) rotate(-45deg);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.region-card:hover .card-arrow {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Animação de entrada dos cards (ativada via JS) */
+.region-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    box-shadow 0.38s ease,
+    border-color 0.38s ease;
+}
+
+.region-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.region-card.visible:hover {
+  transform: translateY(-8px) scale(1.01);
+}
+
+/* ── FOOTER ─────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2.2rem 2rem;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+footer::before {
+  content: '— ✦ —';
+  display: block;
+  margin-bottom: 0.8rem;
+  opacity: 0.4;
+  letter-spacing: 0.5em;
+}
+
+/* ── RESPONSIVO ─────────────────────────────── */
+@media (max-width: 720px) {
+  header { padding: 1.2rem 1.5rem; }
+  nav { gap: 1.4rem; }
+  .hero { padding: 3.5rem 1.5rem 3rem; }
+}

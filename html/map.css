@@ -1,0 +1,100 @@
+header {
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid #1f3a4a;
+    background-color: rgba(0,0,0,0.6);
+}
+
+h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #9bd1ff;
+}
+
+nav {
+      margin-top: 15px;
+}
+
+nav a {
+    color: #c2d8e8;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+ }
+
+ footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #1f3a4a;
+    color: #7f9cad;
+    font-size: 14px;
+}
+
+body {
+    background-color: #00020b;
+    color: white;
+}
+
+a {
+    color: #38b6ff;
+}
+
+.imagensgerais {
+    display: flex;
+    gap: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    text-align;
+    
+}
+
+.imagensgerais2 {
+    display: flex;
+    gap: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    text-align:
+    
+}
+
+.Texto-geral {
+    font-size: 28px;
+    align-items: center;
+    text-align: center;
+}
+
+.ttl_mapas{
+    margin-left: 40px;
+}
+
+.in_mapa{
+    margin-left: 35px;
+}
+
+.main-mapaa{
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 60px;
+}
+
+.card-ferro {
+    justify-self: center;
+    text-align: center;
+    align-items: center ;
+}
+
+
+.tit {
+    text-align: center;
+}
