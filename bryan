@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css.css" />
+    </head>
+    <body>
+        <header>
+            <h1>DREDGE</h1>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="hoodedfigure.html">Personagens</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="bestiario">Bestiário</a>
+                <a href="mapa">Mapa</a>
+            </nav>
+        </header>
+        <main>
+            <div class="tittle">
+                <h3>Hooded Figure</h3>
+            </div>
+        <div class="corpo">
+            <div class="content">
+                <h2>Existem quatro Figuras Encapuzadas (cinco se incluirmos o DLC The Pale Reach) espalhadas   pelo mapa. Todas elas pedirão três peixes e darão um livro ao completar a missão.</h2>
+                <p> Antes da versão 1.1.0 para PC, essa missão era cronometrada; portanto, se você demorasse muito para entregar um peixe, a Figura Encapuzada desapareceria. O cronômetro só começava a contar depois que você interagisse com ela, então era possível coletar os três peixes antes de falar com ela. Nas versões atuais, no entanto, você pode completar a missão no seu próprio ritmo</p>
+                <p id="bhf"> A Figura Azul está localizada em M7. Ela pedirá uma Cavala Azul, uma Cavala Tigre e uma Cavala Serpente. Ela dará o livro "Negociação e Troca: Um Guia", que aumenta em 5% o preço de venda e reduz em 5% o preço de compra.</p>
+                <p id="ghf">A Figura Dourada está localizada em K2. Ela pedirá um Pargo Vermelho, um Peixe-dente-de-sabre e um Caranguejo Azul. Ela dará o livro "Pesca Avançada", que aumenta em 15% a eficácia da pesca com vara.</p>
+                <p id="rhf">A Figura Vermelha está localizada em L14. Ela pedirá uma Enguia-cusk, um Peixe-vela e um Tubarão-cobra. Ela lhe dará o livro Engenharia Náutica, que fará com que equipamentos que usam durabilidade (como redes de arrasto) a percam 15% mais lentamente.</p>
+                <p id="phf">A Figura Roxa está localizada em E9. Ela pedirá um Tarpon, um Caranguejo-ferradura e um Peixe-barril. Ela lhe dará o livro Levando ao Limite: Motores, que faz com que os motores forneçam 7,5% mais velocidade de movimento do que o indicado.</p>
+                <p id="whf">A Figura Branca está localizada em K-5. Ela pedirá um Peixe-gelo Fractalino, Estrelas Cadentes e Vidente Crateroso. Ela lhe dará o livro Livro dos Símbolos Astrais, que aumenta em 4% sua chance de capturar uma aberração.(Presente na DLC “The Pale Reach”).</p>
+                <p id="trivia" class="hftrivia">According to the Fanatic's dialogue, the hooded figures followed the same teachings as he did, but were overtaken by their endless hunger. The figures' hunger bears resemblance a story told by the Ingfell Resident about an old whaler who claimed to gain the secret of immortality from a scroll instructing him to consume abberated fish. The hooded figures appear in the game Dave the Diver in the DREDGE DLC. During nights when the fog falls, they will arrive at Bancho Sushi like any other customers. However, they will exclusively order sushi made out of aberrant fish, while every other costumer will refuse to try it.</p>
+            </div>
+                <div class="outercard">
+                    <h2>The hooded figure <a href="dog.html">▶️</a></h2>
+                    <div class="imgcard">
+                        <img src="" alt="the blue figure" />
+                    </div>
+                    <div class="infocard">
+                        <a class="temporario" href="#bhf">1.1 The blue figure</a>
+                        <a class="temporario" href="#ghf">1.2 The golden figure</a>
+                        <a class="temporario" href="#rhf">1.3 The red figure</a>
+                        <a class="temporario" href="#phf">1.4 The purple figure</a>
+                        <a class="temporario" href="#whf">1.5 The white figure</a>
+                        <a class="temporario" href="#trivia">2 Trivia</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
