@@ -1,0 +1,135 @@
+body {
+    background-color: #070b11;
+    color: white;
+    margin: 0;
+}
+
+.content {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: #070b11;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding-right: 20px;
+    padding-left: 5px;
+    max-width: 800px;
+    min-width:800px;
+}
+
+.tittle {
+    border-bottom: 1px solid #1f3a4a;
+    border-top: 1px solid #1f3a4a;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+.corpo{
+    display: flex;
+}
+
+.outercard {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(49, 49, 49);
+    width: 700px;
+    height: 400px;
+    border-radius: 2px;
+    border: 1px solid #202e3f;
+    border-left: 4px solid #c49a45;
+    transition:all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.outercard:hover {  
+    background-color: rgb(49, 49, 49);
+    border: 2px solid #c49a45; 
+    border-left: 4px solid #c49a45;
+    box-shadow: 0 0 10px #c49a45;
+    transform:translateY(-5px);
+}
+.outercard a {
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition:opacity 0.3s ease, filter 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.temporario:hover {
+    background-color: #202e3f;
+    color:#9d4edd;
+    border-color: #9d4edd;
+    box-shadow: 0 0 10px rgba(196, 154, 69, 0.25);
+
+}
+
+.imgcard {
+    background-color: rgb(141, 141, 141);
+    width: 340px;
+    height: 300px;
+    border-radius: 20px;
+
+}
+
+.hftrivia {
+    font-size: 12px;
+    color: lightcyan;
+}
+
+.infocard {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    background-color: rgb(75, 75, 75);
+    width: 220px;
+    border-radius: 20px;
+    padding: 23px;
+}
+
+.infocard a {
+    color: lightskyblue;
+    text-decoration: none;
+
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #1f3a4a;
+    border-bottom: 1px solid #1f3a4a;
+    color: #7f9cad;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    padding: 30px;
+    text-align: center;
+   
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #9bd1ff;
+}
+
+nav {
+    margin-top: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #c2d8e8;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
