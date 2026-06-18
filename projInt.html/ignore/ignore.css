@@ -1,0 +1,56 @@
+/* ==========================================================================
+   FITAS DE BIOMAS (ESTILO DREDGE COPIADO)
+   ========================================================================== */
+
+.lista-biomas {
+    list-style: none !important; /* Força sumir qualquer bolinha padrão */
+    padding: 0 !important;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Dá espaço entre uma fita e outra */
+}
+
+.lista-biomas li {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    
+    color: #ffffff;
+    text-align: center;
+    
+    /* Força o elemento a virar um bloco firme para o corte funcionar */
+    display: block !important; 
+    width: 160px;
+    padding: 6px 10px 6px 25px; /* Mais espaço na esquerda por causa da ponta */
+    
+    /* Esse comando faz o corte exato da fita (seta na esquerda, reto na direita) */
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
+    -webkit-clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%); /* Garante no Safari/Chrome antigo */
+}
+
+/* Cores idênticas às da imagem que você mandou */
+.bioma-costeiro  { background-color: #3b3175 !important; }
+.bioma-raso      { background-color: #236159 !important; }
+.bioma-oceanico  { background-color: #165372 !important; }
+.bioma-abissal   { background-color: #5c305d !important; }
+.bioma-hadal     { background-color: #632328 !important; }
+.bioma-vulcanico { background-color: #99301c !important; }
+.bioma-mangue    { background-color: #72551e !important; }
+.bioma-gelo      { background-color: #a3d9d9 !important; color: #111111 !important; }
+
+/*
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ignore.css">
+<ul class="lista-biomas">
+    <li class="bioma-costeiro">Costeiro</li>
+    <li class="bioma-raso">Raso</li>
+    <li class="bioma-oceanico">Oceânico</li>
+    <li class="bioma-abissal">Abissal</li>
+    <li class="bioma-hadal">Hadal</li>
+    <li class="bioma-vulcanico">Vulcânico</li>
+    <li class="bioma-mangue">Mangue</li>
+    <li class="bioma-gelo">Gelo</li>
+*/

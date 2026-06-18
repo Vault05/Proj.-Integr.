@@ -1,0 +1,177 @@
+/* Paleta de Cores e Atmosfera de Horror Cósmico */
+:root {
+    --bg-deep: #070b11;
+    --card-bg: #101822;
+    --text-main: #d3d9e3
+    --gold-accent: #c49a45;
+    --panic-color: #9d4edd;
+    --border-color: #202e3f;
+}
+
+.bodyEnemies {
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 20px;
+    background-image: radial-gradient(circle at center, #15202c 0%, #070b11 100%);
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.titleEnemies h1 {
+    color: var(--gold-accent);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+p.subtitle {
+    font-style: italic;
+    color: #7b8c9c;
+    margin: 0;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.filters button {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 12px 24px;
+    margin: 0 6px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 0.9em;
+    transition: all 0.25s ease-in-out;
+    border-radius: 3px;
+}
+
+.filters button:hover, .filters button.active {
+    background-color: var(--border-color);
+    color: var(--gold-accent);
+    border-color: var(--gold-accent);
+    box-shadow: 0 0 10px rgba(196, 154, 69, 0.25);
+}
+
+.bestiary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fish-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.fish-card:hover {
+    transform: translateY(-6px);
+}
+
+.fish-image-container {
+    width: 100%;
+    height: 150px;
+    background-color: #030508;
+    border: 1px solid var(--border-color);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.fish-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.75;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.fish-card:hover .fish-image-container img {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.fish
+h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.4em;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.habitat {
+    font-size: 0.78em;
+    text-transform: uppercase;
+    color: #697a8c;
+    margin-bottom: 15px;
+    display: block;
+    letter-spacing: 1.5px;
+}
+
+.description {
+    font-size: 0.93em;
+    line-height: 1.6;
+    color: #9aa5b1;
+    margin: 0;
+}
+.fish-card.regional {
+    border-left: 4px solid var(--gold-accent);
+}
+
+.fish-card.regional:hover {
+    border-color: var(--gold-accent);
+    box-shadow: 0 5px 20px rgba(196, 154, 69, 0.15);
+}
+
+.fish-card.regional h2 {
+    color: #e5b358;
+}
+
+.fish-card.panic {
+    border-left: 4px solid var(--panic-color);
+    border-color: #351a4d;
+}
+
+.fish-card.panic:hover {
+    border-color: var(--panic-color);
+    box-shadow: 0 5px 25px rgba(157, 78, 221, 0.25);
+}
+
+.fish-card.panic h2 {
+    color: var(--panic-color);
+    text-shadow: 0 0 6px rgba(157, 78, 221, 0.4);
+}
+
+/* Efeito Especial: O nome da alucinação treme ao focar o mouse */
+.fish-card.panic:hover h2 {
+    animation: distort 0.25s linear infinite;
+}
+
+@keyframes distort {
+    0% { transform: translate(0); }
+    20% { transform: translate(-1.5px, 1px); }
+    40% { transform: translate(-1px, -1px); }
+    60% { transform: translate(1.5px, 0.5px); }
+    80% { transform: translate(0.5px, -1.5px); }
+    100% { transform: translate(0); }
+}
